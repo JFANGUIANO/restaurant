@@ -70,7 +70,7 @@ const Login = () => {
 
                 //redireccionar hacia clientes
                 setTimeout(() => {
-                    router.push('/');
+                    router.push('/Dasboard');
                 }, 2000);
 
                 //redirigir usuario para iniciar sesion

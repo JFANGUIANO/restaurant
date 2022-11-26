@@ -19,14 +19,13 @@ const Sidebar = () => {
 
     return ( 
             // <aside >
-            
-            <nav className="bg-gray-800 fixed z-30 w-full bg-white border-b-2 border-indigo-600">
+            <nav className="bg-gray-800 fixed z-30 w-full bg-white">
                 <div className="px-6 py-3">
                     <div className="flex items-center justify-between">
                         
                         {/* Boton del navbar desplegar menu */}
                         <div className="flex items-center justify-start">
-                            <button className="p-2 text-gray-500 rounded cursor-pointer lg:hidden hover:bg-gray-900" 
+                            <button className="p-1 text-gray-500 rounded cursor-pointer lg:hidden hover:bg-gray-900 md:hidden" 
                                 onClick={()=>setOpen(!open)}
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24"
@@ -34,7 +33,7 @@ const Sidebar = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                                 </svg>
                             </button>
-                                <span className="text-white flex items-center text-xl font-bold">Nombre del Negocio</span>
+                                <span className="text-white flex items-center text-xl font-bold">Bienvenido</span>
                         </div>
                         
                         <div className="flex items-center text-center">
@@ -43,9 +42,9 @@ const Sidebar = () => {
                             <div className="bg-gray-800 w-full block flex-grow lg:flex lg:items-center lg:w-auto" /* {`w-full block flex-grow lg:flex lg:items-center lg:w-auto`} */>
                                 <ul className={`${ !open ? 'hidden' : 'mt-8 w-3/5'} bg-gray-800 md:flex absolute md:static bg-white left-0 text-left`}>
                                     
-                                    <li className={router.pathname === "/" ? "bg-blue-800 p-2" : "p-2 hover:bg-gray-900 rounded"}>
-                                        <Link href="/">
-                                            <a className="text-white block flex space-x-2 md:space-x-8">
+                                    <li className={router.pathname === "/Dasboard" ? "bg-blue-800 p-2" : "p-2 hover:bg-gray-900 rounded"}>
+                                        <Link href="/Dasboard">
+                                            <a className="text-white block flex space-x-2 md:space-x-8 mx-4">
                                                 <span className="text-2xl mx-1"> <AiFillHome/> </span>
                                                 Home
                                             </a>     
@@ -54,7 +53,7 @@ const Sidebar = () => {
 
                                     <li className={router.pathname === "/Restaurante" ? "bg-blue-800 p-2" : "p-2 hover:bg-gray-900 rounded"}>
                                         <Link href="/Restaurante">
-                                            <a className="text-white block flex">
+                                            <a className="text-white block flex space-x-2 md:space-x-8 mx-4">
                                                 <span className="text-2xl mx-1"> <AiTwotoneShop/> </span>
                                                 Restaurante
                                             </a>     
@@ -63,7 +62,7 @@ const Sidebar = () => {
 
                                     <li className={router.pathname === "/Menu" ? "bg-blue-800 p-2" : "p-2 hover:bg-gray-900 rounded"}>
                                         <Link href="/Menu">
-                                            <a className="text-white block flex">
+                                            <a className="text-white block flex space-x-2 md:space-x-8 mx-4">
                                                 <span className="text-2xl mx-1"> <AiFillBook/> </span>
                                                 Menu
                                             </a>     
@@ -94,16 +93,23 @@ const Sidebar = () => {
                                 </button>
 
                                 {/* <!-- Dropdown menu --> */}
-                                {/* <div className="absolute right-0 z-20 w-56 mt-2 overflow-hidden bg-white rounded-md">
-                                    
-                                </div> */}
+                                {/* <div className="absolute right-0 z-20 w-56 mt-2 overflow-hidden bg-white rounded-md ">
+                                    <ul className="dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none">
+                                        <li>
+                                            <a href="#" className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">Dashboard</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">Settings</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                */}
                             </div>
                         </div>
                     </div>
                 </div>
             </nav>
-            
-        // </aside>
+            // </aside>
      );
 }
  
